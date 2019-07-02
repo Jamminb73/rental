@@ -1,0 +1,41 @@
+#navbar {
+  background: #1a86fb;
+  color: #fff;
+}
+
+#navbar a {
+  color: #f4f4f4;
+}
+
+#toggler {
+  color: #fff !important;
+}
+
+.carousel-item {
+  height:700px;
+}
+
+.carousel-image-1 {background: url("../img/Porsche.jpg") no-repeat center center/cover;}
+
+.carousel-image-2 {background: url("../img/Lambo.jpg") no-repeat center center/cover;}
+
+.carousel-image-3 {background: url("../img/CityLights.jpg") no-repeat center center/cover;}
+
+.carousel-image-4 {background: url("../img/Camaro.jpg") no-repeat center center/cover;}
+
+.carousel-image-5 {background: url("../img/Mustang.jpg") no-repeat center center/cover;}
+
+#home_bottom {
+  height: 400px;
+
+}
+
+#home_bottom .container {
+  display: flex;
+  padding: 200px 0;
+}
+
+#home_bottom a {
+  text-decoration: none;
+  color: #333;
+}

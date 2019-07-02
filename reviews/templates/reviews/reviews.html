@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% for review in reviews %}
+  <div class="container">
+    <a href="{%url 'detail' review.id %}">
+    <h1>{{ review.title }}</h1>
+    <p>{{ review.content }}</p>
+    </a>
+    {% if review.image %}
+     <img class="img-fluid pt-3" src="{{ review.image.url }}" width=300   />
+    {% endif %}
+  </div>
+
+  {% endfor %}
+
+{% endblock %}

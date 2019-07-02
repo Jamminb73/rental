@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rental Reviews</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<body>
+</head>
+
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container">
+
+
+        <a class="navbar-brand" href="{% url 'home' %}">RentReview</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="toggler" class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
+                </li>
+
+            </ul>
+
+        </div>
+      </div>
+    </nav>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <footer class="text-muted">
+    <div class="container text-center">
+      <a href="https://www.jayungosite.com" target="_blank">
+      <p style="color: #1a86fb;">Created by Jammin sites &copy {% now "Y" %}</p>
+      </a>
+    </div>
+  </footer>
+
+  <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
