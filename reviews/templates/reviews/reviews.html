@@ -1,18 +1,32 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
-  {% for review in reviews %}
-  <div class="container">
-    <a href="{%url 'detail' review.id %}">
-    <h1>{{ review.title }}</h1>
-    <p>{{ review.content }}</p>
-    </a>
-    {% if review.image %}
-     <img class="img-fluid pt-3" src="{{ review.image.url }}" width=300   />
-    {% endif %}
-  </div>
+<link rel="stylesheet" href="{% static 'css/reviews.css' %}">
 
-  {% endfor %}
+<div  class="container">
+    <div class="row">
+
+
+        {% for review in reviews %}
+        <div id="reviews" class="col-md-4">
+            {% if review.image %}
+            <img class=" card-img-top img-fluid pt-3" src="{{ review.image.url }}" width=300  />
+            {% endif %}
+            <div  class="card-body">
+
+
+            <a href="{%url 'detail' review.id %}">
+                <h3 class="card-text">{{ review.title }}</h3>
+                <p class="card-text">{{ review.summary }}</p>
+            </a>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

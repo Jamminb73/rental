@@ -1,11 +1,13 @@
-#navbar {
+.navbar {
   background: #1a86fb;
   color: #fff;
 }
 
-#navbar a {
+/* #navbar a {
   color: #f4f4f4;
-}
+} */
+
+
 
 #toggler {
   color: #fff !important;

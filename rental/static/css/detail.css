@@ -1,0 +1,10 @@
+#review {
+  width: 450px;
+  border: #333 solid 1px;
+  margin-top: 3rem;
+  padding: 1.5rem;
+}
+
+body {
+  background: #f4f4f4;
+}

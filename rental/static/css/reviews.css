@@ -1,0 +1,13 @@
+
+#reviews {
+  border: #333 solid 1px;
+  margin-top: 1rem;
+}
+
+.row {
+  padding: 2rem;
+}
+
+img {
+  max-height: 450px;
+}

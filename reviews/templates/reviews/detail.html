@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
-<div class="container">
+
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+<div id="review" class="container">
   <h1>{{ review.title }}</h1>
   <p>{{ review.content }}</p>
   <a href="{% url 'update' review.id %}">
-      <input type="submit" name="Update" value="Update">
+      <input class="btn btn-primary" type="submit" name="Update" value="Update">
   </a>
 
   <a href="{% url 'delete' review.id %}">
-      <input type="submit" name="Delete" value="Delete">
+      <input class="btn btn-danger" type="submit" name="Delete" value="Delete">
   </a>
 </div>
 {% endblock  %}
