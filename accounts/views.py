@@ -4,8 +4,8 @@ from django.contrib.auth.models import User, auth
 
 def login(request):
     if request.method == 'POST':
-        username = request.Post['username']
-        password = request.Post['password']
+        username = request.POST['username']
+        password = request.POST['password']
 
         user = auth.authenticate(username=username, password=password)
 
@@ -36,7 +36,7 @@ def register(request):
                 return redirect('register')
             else:
                 # Looks good
-                user = User.objects.create_user(username= username, password=password,
+                user = User.objects.create_user(username=username, password=password,
                 email=email)
                 # Login after register
                 # auth.login(request, user)
@@ -56,4 +56,4 @@ def logout(request):
     if request.method == 'POST':
         auth.logout(request)
         message.success(request, "You are now logged out")
-        return redirect("home")
+        return render(request, 'home')

@@ -5,6 +5,7 @@
 {% block title %} | Register Account {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 <section id="register" class="bg-light py-5">
   <div class="container">
     <div class="row">
@@ -18,7 +19,7 @@
             <!-- Alerts -->
             {% include "partials/_alerts.html" %}
               <form action="{% url 'register' %}" method="POST">
-                {% csrf_token %}                
+                {% csrf_token %}
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control" required>
@@ -35,7 +36,7 @@
                 <label for="password">Confirm Password</label>
                 <input type="password" name="password2" class="form-control" required>
               </div>
-              <input type="submit" value="Register" class="btn btn-secondary btn-block">
+              <input type="submit" value="Register" id="register-btn" class="btn btn-secondary btn-block">
             </form>
           </div>
         </div>

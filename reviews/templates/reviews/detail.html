@@ -8,6 +8,7 @@
 <div id="review" class="container">
   <h1>{{ review.title }}</h1>
   <p>{{ review.content }}</p>
+  {% if user.is_staff %}
   <a href="{% url 'update' review.id %}">
       <input class="btn btn-primary" type="submit" name="Update" value="Update">
   </a>
@@ -15,5 +16,10 @@
   <a href="{% url 'delete' review.id %}">
       <input class="btn btn-danger" type="submit" name="Delete" value="Delete">
   </a>
+  {% endif %}
+</div>
+
+<div class="container" id="below">
+
 </div>
 {% endblock  %}

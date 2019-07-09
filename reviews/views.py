@@ -13,7 +13,7 @@ def reviews(request):
 # @login_required
 @staff_member_required
 def review_create(request):
-    form = ReviewForm(request.POST or None, request.FILES)
+    form = ReviewForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         obj = form.save(commit=False)
         obj.user = request.user

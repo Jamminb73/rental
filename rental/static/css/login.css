@@ -1,0 +1,27 @@
+body {
+  background: f8f8f8;
+}
+
+#login .card {
+  background: #1a86fb;
+  color: #f4f4f4;
+}
+
+#login-btn {
+  background: #1a86fb;
+  color: #fff;
+  border: #f4f4f4 solid 2px;
+  border-radius: 5px;
+}
+
+#register .card {
+  background: #1a86fb;
+  color: #f4f4f4;
+}
+
+#register-btn {
+  background: #1a86fb;
+  color: #fff;
+  border: #f4f4f4 solid 2px;
+  border-radius: 5px;
+}

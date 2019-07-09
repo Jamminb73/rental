@@ -30,10 +30,38 @@
       <li class="nav-item">
         <a class="nav-link" href="/reviews">Reviews</a>
       </li>
-
-
     </ul>
-    
+
+    <ul class="navbar-nav ml-auto">
+           {% if user.is_authenticated %}
+                {% if user.is_staff %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'create' %}">New Review<span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+
+           <li class="nav item">
+            <a class="nav-link active" href="#">Profile<span class="sr-only">(current)</span></a>
+        </li>
+            <li class="nav item">
+           <a class="nav-link active" href="{% url 'logout' %}">Logout<span class="sr-only">(current)</span></a>
+        </li>
+
+           {% csrf_token %}
+           <input type="hidden" />
+           {% else %}
+           <li class="nav-item active">
+             <a class="nav-link" href="{% url 'login' %}">Login<span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item active">
+             <a class="nav-link" href="{% url 'register' %}">Register<span class="sr-only">(current)</span></a>
+           </li>
+
+
+         </ul>
+        {% endif %}
+
+
   </div>
 </div>
 
