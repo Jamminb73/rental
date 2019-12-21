@@ -7,13 +7,18 @@
   {% if title %}
 
   {% endif %}
+
+
 <div class="container">
 
   <form class="pt-5" method="POST" action="." enctype="multipart/form-data" > {% csrf_token %}
       {{ form.as_p }}
+      {{ form.media | safe}}
+
 
 
       <input type="submit" name="" value="Submit">
   </form>
+
 </div>
 {% endblock %}

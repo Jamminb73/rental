@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'landing.apps.LandingConfig',
     'accounts.apps.AccountsConfig',
     'reviews.apps.ReviewsConfig',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [

@@ -1,10 +1,13 @@
 from django import forms
 from .models import ReviewPost
+from ckeditor.widgets import CKEditorWidget
 
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = ReviewPost
-        fields = ['title', 'content', 'image']
+        fields = ['title',
+        'content' ,
+        'image']
 
     # def clean_title(self, *args, **kwargs):
     #     instance = self.instance

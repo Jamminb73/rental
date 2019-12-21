@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 <div id="review" class="container">
   <h1>{{ review.title }}</h1>
-  <p>{{ review.content }}</p>
+  <p>{{ review.content | safe }}</p>
   {% if user.is_staff %}
   <a href="{% url 'update' review.id %}">
       <input class="btn btn-primary" type="submit" name="Update" value="Update">
