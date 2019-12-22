@@ -2,12 +2,15 @@
 
 {% block content %}
     {% if user.is_staff %}
-    <h1>Are you sure you want to delete.</h1>
-    <h2>{{ reviewdetail.title }}</h2>
+    <div class="container">
 
-    <form method="POST"> {% csrf_token %}
-        <button class="btn btn-danger">Yes, delete</button>
-    </form>
+        <h1>Are you sure you want to delete.</h1>
+        <h2>{{ reviewdetail.title }}</h2>
+        
+        <form method="POST"> {% csrf_token %}
+            <button class="btn btn-danger">Yes, delete</button>
+        </form>
+    </div>
     {% endif %}
     
 {% endblock %}

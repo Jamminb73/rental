@@ -6,20 +6,39 @@
 
 <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 <div id="review" class="container">
-  <h1>{{ review.title }}</h1>
-  <p>{{ review.content | safe }}</p>
+  
+  <header class="header">
+    <h1>{{ review.title }}</h1>
+  </header>
+  <div class="pros">
+    <h3>Things We Really Liked.</h3>
+    <p>{{ review.content | safe }}</p>
+  </div>
+  <div class="cons">
+    <h3>Things We were not so excited about.</h3>
+    <p>{{ review.cons | safe }}</p>
+  </div>
+  <div class="contents">
+    <h3>Final Thoughts</h3>
+    <p>{{ review.additionalComments | safe }}
+  </div>
   {% if user.is_staff %}
-  <a href="{% url 'update' review.id %}">
-      <input class="btn btn-primary" type="submit" name="Update" value="Update">
-  </a>
-
-  <a href="{% url 'delete' review.id %}">
-      <input class="btn btn-danger" type="submit" name="Delete" value="Delete">
-  </a>
-  {% endif %}
 </div>
+  <div id="controls">
+
+    <a href="{% url 'update' review.id %}">
+      <input class="btn btn-primary" type="submit" name="Update" value="Update">
+    </a>
+    
+    <a href="{% url 'delete' review.id %}">
+      <input class="btn btn-danger" type="submit" name="Delete" value="Delete">
+    </a>
+    {% endif %}
+  </div>
 
 <div class="container" id="below">
 
 </div>
 {% endblock  %}
+
+

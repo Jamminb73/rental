@@ -9,6 +9,8 @@ class ReviewPost(models.Model):
     user = models.ForeignKey(User, default=1, null=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=200)
     content = RichTextField(null=True, blank=True)
+    cons = RichTextField(null=True, blank=True)
+    additionalComments = RichTextField(null=True, blank=True)
     image = models.ImageField( upload_to='images/', null=True, blank=True)
     publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)

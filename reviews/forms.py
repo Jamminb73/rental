@@ -6,7 +6,9 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = ReviewPost
         fields = ['title',
-        'content' ,
+        'content',
+        'cons',
+        'additionalComments',
         'image']
 
     # def clean_title(self, *args, **kwargs):
