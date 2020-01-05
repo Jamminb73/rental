@@ -1,8 +1,8 @@
-#review {  
+#review {
   width: 900px;
   margin-top: 3rem;
   padding: 1.5rem;
- 
+
 }
 
 .container {
@@ -32,13 +32,13 @@ body {
 .cons {
   grid-area: cons;
   margin: 1rem;
-  
+
 }
 
 .contents {
   grid-area: contents;
   text-align: center;
-  
+
 }
 
 #below {
@@ -49,4 +49,16 @@ margin-top: 200px;
   display: flex;
   justify-content: space-evenly;
 
+}
+
+@media(max-width: 500px)
+{
+  .container {
+    display: grid;
+     grid-template-areas:
+    'header'
+    'pros'
+    'cons'
+    'contents';
+  }
 }
