@@ -1,0 +1,64 @@
+#review {
+  width: 900px;
+  margin-top: 3rem;
+  padding: 1.5rem;
+
+}
+
+.container {
+  display: grid;
+   grid-template-areas:
+  'header header header header'
+  'pros pros cons cons'
+  'pros pros cons cons'
+  'contents contents contents contents';
+}
+
+body {
+  background: #f6f6f6;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+}
+
+.pros {
+  grid-area: pros;
+  margin: 1rem;
+
+}
+
+.cons {
+  grid-area: cons;
+  margin: 1rem;
+
+}
+
+.contents {
+  grid-area: contents;
+  text-align: center;
+
+}
+
+#below {
+margin-top: 200px;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+@media(max-width: 550px)
+{
+  .container {
+    display: grid;
+     grid-template-areas:
+    'header'
+    'pros'
+    'cons'
+    'contents';
+  }
+}
