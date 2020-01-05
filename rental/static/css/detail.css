@@ -50,15 +50,3 @@ margin-top: 200px;
   justify-content: space-evenly;
 
 }
-
-@media(max-width: 550px)
-{
-  .container {
-    display: grid;
-     grid-template-areas:
-    'header'
-    'pros'
-    'cons'
-    'contents';
-  }
-}
